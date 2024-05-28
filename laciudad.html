@@ -3,23 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>La Plata - Ciudad de las diagonales
     </title>
     <link rel="stylesheet" href="./css/laciudad.css">
 </head>
+
 <body>
     <header>
-        <h1>La Plata</h1>
         <nav>
-            <ul>
-                <li><a href="#descripcion">Descripción</a></li>
-                <li><a href="#historia">Historia</a></li>
-                
-            </ul>
+          <ul class="BarraDeNavegacion">
+            <a href="./index.html">
+              <img
+                src="./img/imagen de cultura.jpg"
+                height="60px"
+                width="70px"
+                class="logo-navbar"
+                alt="Logo de cultura"
+              />
+            </a>
+            <li class="itemsNavegacion"><a href="./index.html">Inicio</a></li>
+            <li class="itemsNavegacion">La ciudad</li>
+            <li class="itemsNavegacion">Espacios culturales</li>
+            <li class="itemsNavegacion">Agenda</li>
+            <li class="itemsNavegacion">
+              <a href="./contactoPrueba.html">Contacto</a>
+            </li>
+          </ul>
         </nav>
-    </header>
-    
-    <main>
+      </header>
+   
+     <main>
+      <h1>La Plata</h1>
         <section id="descripcion">
             <h2>Descripción General</h2>
             <img src="img/pasajeDardoRocha.jpg" class="img-Cultura" alt="Pasaje Dardo Rocha"/>
@@ -34,9 +55,55 @@
         
     </main>
     
-    <footer>
-
-        <p>&copy; 2024 La Plata - Todos los derechos reservados.</p>
+    <footer class="footer">
+      <div class="social_media">
+        <ul>
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=100027310347149"
+              target="_blank"
+              title="facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/productosdemipueblo/?hl=es"
+              target="_blank"
+              title="instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=pmAk66Bs2pY&ab_channel=Lascuriosidadesdemam%C3%A1"
+              target="_blank"
+              title="youtube"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="mailto:sabrinatecherasosa@gmail.com"
+              target="_blank"
+              title="gmail"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="contact_info">
+        <ul>
+          <li>
+            <a href="mailto:culturaciudad@laplata.gob.ar" style="color: #007bff"
+              >culturaciudad@laplata.gob.ar</a
+            >
+          </li>
+          <li><a href="tel:+542214895036">+54 221 4895036</a></li>
+          <li>Diag. 80 e/ 47 y 46</li>
+        </ul>
+      </div>
+    </footer>
     
 </body>
 </html>
