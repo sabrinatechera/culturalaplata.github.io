@@ -1,17 +1,24 @@
-*{
-    margin:0;
-    padding:0;
+/* Estilos base para dispositivos móviles */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    border: 1px solid rgb(41, 31, 136);
+body {
     margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('/img/fondo4.jpg'); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta de tu imagen */
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-repeat: no-repeat; /* Para que la imagen no se repita */
+    background-position: center; /* Para centrar la imagen en el fondo */
 }
 
-/* Estilos para la barra de navegación */
 .img-navbar {
-    width: 500px;
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     margin-right: auto;
@@ -20,81 +27,67 @@ body{
 
 .BarraDeNavegacion {
     background-color: rgba(36, 36, 130, 0.886);
-    margin-right: 20rem;
-    margin-left: 20rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    height: 2.5rem;
+    height: auto;
     align-items: center;
+    margin: 10px;
 }
 
+.itemsNavegacion {
+    list-style: none;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0;
+}
 
-main{
+.itemsNavegacion a {
+    text-decoration: none;
+    color: inherit !important;
+}
+
+main {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    flex: 1;
 }
 
-.section-Region{
-    border: 1px solid rgb(32, 214, 87);
+.section-Region {
     background-image: url("https://pixabay.com/get/ga86d5d0f2797806c8e2f456e4e5dd6e402175707423fe9fadfe25df71caaed2ae2b774a7fedfec8fbb90426c738e5810cfc2130582846d535449247b9d30a02de4805c7e9920b75d53fd5481d5d18668_640.jpg");
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     margin: 0 1rem 1rem 1rem;
-    /*background-size: 70rem; 
-    background-repeat: no-repeat;
-    background-position: center;*/
-   
 }
 
-.presentation{
+.presentation {
     color: rgb(34, 34, 34);
-    font-family: Arial, Helvetica, sans-serif;  
-    text-align: center   
-
-}
-
-
-.title-1{
-    font-weight: bold;
-    color: rgb(41, 40, 40);
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;  
-    text-align: center;
-
-}
-
-.itemsNavegacion{
-    list-style: none;
-    font-weight: bold;
-    color: white;
     font-family: Arial, Helvetica, sans-serif;
-
-}
-.itemsNavegacion a {
-    text-decoration: none; /* Quita el subrayado */
-    color: inherit !important; /* Usa el color heredado, anulando cualquier otro color definido */
+    text-align: center;
 }
 
-/*Cuadrícula de imágenes en index*/
+.title-1 {
+    font-weight: bold;
+    color: rgb(91, 107, 227);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
 
-.container-imgCultura{
+/* Cuadrícula de imágenes en index */
+.container-imgCultura {
     display: flex;
-    border: 1px solid red;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-
 }
 
-.img-Cultura{
+.img-Cultura {
     height: 10rem;
 }
-
-
-/*Fin - cuadrícula de imágenes en index*/
 
 /* Estilos para el footer */
 .footer {
@@ -105,12 +98,12 @@ main{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 1000;
 }
 
-/* Estilos para las redes sociales y la información de contacto en el footer */
 .social_media ul,
 .contact_info ul {
     list-style: none;
@@ -140,50 +133,71 @@ main{
 
 .social_media ul li a i {
     font-size: 24px;
+    color: white;
 }
 
+.carousel-inner img {
+    height: 50vh;
+    object-fit: cover;
+}
 
-/*responsive*/
-@media screen and (max-width: 768px) {
+/* Tablet styles */
+@media screen and (min-width: 768px) {
     .BarraDeNavegacion {
-        flex-direction: column;
-        height: auto;
-        margin-right: 10px;
-        margin-left: 10px;
+        flex-direction: row;
+        height: 2.5rem;
+        margin-right: 5rem;
+        margin-left: 5rem;
     }
 
     .itemsNavegacion {
-        margin: 10px 0;
-    }
-
-    .right-column {
-        width: 90%;
-        max-width: none;
-    }
-    
-    .footer {
-        position: relative;
-        margin-top: 20px;
-    }
-
-    .container,
-    main,
-    .right-column {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .BarraDeNavegacion {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .itemsNavegacion {
-        margin: 10px 0;
+        margin: 0;
     }
 
     .img-navbar {
-        width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
-        height: auto; /* El alto se ajustará automáticamente para mantener la proporción */
+        width: 100%;
+    }
+
+    .footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+    .BarraDeNavegacion {
+       display: flex;
+       width: auto;
+       height: auto;
+       justify-content: space-around;
+    }
+
+    .img-navbar {
+        width: 500px;
+    }
+
+    /* Ajustes para las tarjetas en dispositivos de escritorio */
+    .cards-row .col-md-3 {
+        margin-right: 3px;
+        margin-bottom: 10px; /* Agrega un margen inferior de 10px a las tarjetas */
+        display: grid; /* Revierte a la visualización de bloque */
+    }
+
+    .cards-row .col-md-3:last-child {
+        margin-right: 0; /* Elimina el margen a la derecha de la última tarjeta en dispositivos de escritorio */
+    }
+}
+
+/* Estilos para dispositivos de escritorio con max-width */
+@media screen and (max-width: 1023px) {
+    .BarraDeNavegacion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .itemsNavegacion {
+        margin: 10px;
     }
 }
