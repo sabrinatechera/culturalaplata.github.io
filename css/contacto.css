@@ -12,9 +12,10 @@ body {
     background-attachment: fixed;
 }
 
-/* Estilos para la barra de navegación */
+/* Estilos para el header*/
 .img-navbar {
-    width: 500px;
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     margin-right: auto;
@@ -22,25 +23,26 @@ body {
 }
 
 .BarraDeNavegacion {
-    background-color: rgba(36, 36, 130, 0.886);
-    margin-right: 20rem;
-    margin-left: 20rem;
+    background-color: #00457c;
+    border-bottom: 7px solid #0079C1;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    height: 2.5rem;
+    height: auto;
     align-items: center;
+  
 }
 
 .itemsNavegacion {
     list-style: none;
     font-weight: bold;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #F6F7F8;
+    margin: 10px 0;
 }
+
 .itemsNavegacion a {
-    text-decoration: none; /* Quita el subrayado */
-    color: inherit !important; /* Usa el color heredado, anulando cualquier otro color definido */
+    text-decoration: none;
+    color: inherit !important;
 }
 
 /* Estilos para el contenido principal */
@@ -87,22 +89,21 @@ button {
 button:hover {
     background-color: #2980b9;
 }
-
 /* Estilos para el footer */
 .footer {
-    background-color: rgba(34, 34, 73, 0.886);
-    color: hsl(0, 0%, 99%);
+    background-color: #00457c;
+    color: #F6F7F8;
     padding: 20px;
     text-align: center;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 1000;
 }
 
-/* Estilos para las redes sociales y la información de contacto en el footer */
 .social_media ul,
 .contact_info ul {
     list-style: none;
@@ -132,7 +133,14 @@ button:hover {
 
 .social_media ul li a i {
     font-size: 24px;
+    color: #F6F7F8;
 }
+
+.carousel-inner img {
+    height: 50vh;
+    object-fit: cover;
+}
+
 
 @media screen and (min-width: 768px) {
     .BarraDeNavegacion {
