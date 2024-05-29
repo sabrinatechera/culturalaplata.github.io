@@ -150,8 +150,6 @@ main {
     margin: auto;
 }
 
-
-
 /* Estilos para el footer */
 .footer {
     background-color: #00457c;
@@ -165,6 +163,8 @@ main {
     bottom: 0;
     width: 100%;
     z-index: 1000;
+    margin-top: 20px; /* Agrega un margen superior para separarlo del contenido anterior */
+
 }
 
 .social_media ul,
