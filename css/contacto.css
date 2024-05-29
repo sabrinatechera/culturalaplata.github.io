@@ -1,20 +1,57 @@
+/* Estilos base para dispositivos móviles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
-/* Estilos para el cuerpo de la página */
 body {
-    background-image: url('../img/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color:#F6F7F8;
+ 
 }
 
-/* Estilos para la barra de navegación */
+/* Estilo para main*/
+
+main {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-Region{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    
+}
+
+.title-1 {
+    background-color:#0079C1 ;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-shadow: 0px 5px 10px rgba(0,0,0,0.7);
+    
+}
+
+.presentation {
+    color: #0079C1;
+    text-align: center;
+}
+
+
+/* Estilos para el header*/
 .img-navbar {
-    width: 500px;
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     margin-right: auto;
@@ -22,87 +59,114 @@ body {
 }
 
 .BarraDeNavegacion {
-    background-color: rgba(36, 36, 130, 0.886);
-    margin-right: 20rem;
-    margin-left: 20rem;
+    background-color: #00457c;
+    border-bottom: 7px solid #0079C1;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    height: 2.5rem;
+    height: auto;
     align-items: center;
+  
 }
 
 .itemsNavegacion {
     list-style: none;
     font-weight: bold;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #F6F7F8;
+    margin: 10px 0;
 }
+
 .itemsNavegacion a {
-    text-decoration: none; /* Quita el subrayado */
-    color: inherit !important; /* Usa el color heredado, anulando cualquier otro color definido */
+    text-decoration: none;
+    color: inherit !important;
 }
 
-/* Estilos para el contenido principal */
-main {
+/*Estilos para imágenes de agenda*/
+.contenedorFechas{
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    height: 100vh;
 }
 
-
-
-.right-column {
-    text-align: center;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input, textarea {
-    margin-bottom: 10px;
-    padding: 8px;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    background-color: rgba(36, 36, 130, 0.886);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+.contenedorFechas figure{
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.50);
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #2980b9;
+.contenedorFechas figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.contenedorFechas figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,103,123,0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.contenedorFechas figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedorFechas figure:hover > .capa h3{/*titulo de cada imagen de agenda*/
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+.contenedorFechas figure:hover > img{
+    transform: scale(1.3);
+}
+
+.contenedorFechas figure .capa h3{/*titulo de cada imagen de agenda*/
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 20px;
+}
+
+.contenedorFechas figure .capa p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
 }
 
 /* Estilos para el footer */
 .footer {
-    background-color: rgba(34, 34, 73, 0.886);
-    color: hsl(0, 0%, 99%);
+    background-color: #00457c;
+    color: #F6F7F8;
     padding: 20px;
     text-align: center;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
+    z-index: 1000;
+    margin-top: 20px; /* Agrega un margen superior para separarlo del contenido anterior */
+
 }
 
-/* Estilos para las redes sociales y la información de contacto en el footer */
 .social_media ul,
 .contact_info ul {
     list-style: none;
@@ -132,46 +196,77 @@ button:hover {
 
 .social_media ul li a i {
     font-size: 24px;
+    color: #F6F7F8;
 }
 
+.carousel-inner img {
+    height: 50vh;
+    object-fit: cover;
+}
+
+/* Tablet styles */
 @media screen and (min-width: 768px) {
     .BarraDeNavegacion {
-        flex-direction: column;
-        height: auto;
-        margin-right: 10px;
-        margin-left: 10px;
+        flex-direction: row;
+        
     }
 
-    .itemsNavegacion {
-        margin: 10px 0;
-    }
-
-
-
-    .right-column {
-        width: 90%;
-        max-width: none;
-    }
     
-    .footer {
-        position: relative;
-        margin-top: 20px;
-    }
-
-    .container,
-    main,
-    .right-column {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .BarraDeNavegacion {
-        margin-right: 10px;
-        margin-left: 10px;
+    .itemsNavegacion {
+        margin: 0;
     }
 
     .img-navbar {
-        width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
-        height: auto; /* El alto se ajustará automáticamente para mantener la proporción */
+        width: 100%;
+    }
+
+    .contenedorTitulo{
+        margin:0;
+    }
+
+    .footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+    .BarraDeNavegacion {
+       display: flex;
+       width: auto;
+       height: auto;
+       justify-content: space-around;
+    }
+
+    .img-navbar {
+        width: 500px;
+    }
+
+    /* Ajustes para las tarjetas en dispositivos de escritorio */
+    .cards-row .col-md-3 {
+        margin-right: 3px;
+        margin-bottom: 10px; /* Agrega un margen inferior de 10px a las tarjetas */
+        display: grid; /* Revierte a la visualización de bloque */
+    }
+
+    .cards-row .col-md-3:last-child {
+        margin-right: 0; /* Elimina el margen a la derecha de la última tarjeta en dispositivos de escritorio */
+    }
+}
+
+/* Estilos para dispositivos de escritorio con max-width */
+@media screen and (max-width: 1023px) {
+    .BarraDeNavegacion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .itemsNavegacion {
+        margin: 10px;
+    }
+    .contenedorTitulo {
+        margin: 10px
     }
 }

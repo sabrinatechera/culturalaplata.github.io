@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -12,10 +12,39 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('/img/fondo4.jpg'); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta de tu imagen */
-    background-size: cover; /* Para que la imagen cubra todo el fondo */
-    background-repeat: no-repeat; /* Para que la imagen no se repita */
-    background-position: center; /* Para centrar la imagen en el fondo */
+    background-color:#F6F7F8;
+ 
+}
+
+/* Estilo para main*/
+
+main {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-Region{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    
+}
+
+.title-1 {
+    background-color:#0079C1 ;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-shadow: 0px 5px 10px rgba(0,0,0,0.7);
+    
+}
+
+.presentation {
+    color: #0079C1;
+    text-align: center;
 }
 
 
@@ -30,20 +59,20 @@ body {
 }
 
 .BarraDeNavegacion {
-    background-color: rgba(36, 36, 130, 0.886);
+    background-color: #00457c;
+    border-bottom: 7px solid #0079C1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: auto;
     align-items: center;
-    margin: 10px;
+  
 }
 
 .itemsNavegacion {
     list-style: none;
     font-weight: bold;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #F6F7F8;
     margin: 10px 0;
 }
 
@@ -51,6 +80,8 @@ body {
     text-decoration: none;
     color: inherit !important;
 }
+
+
 
 /*Estilos para imágenes de agenda*/
 .contenedorFechas{
@@ -64,8 +95,8 @@ body {
 
 .contenedorFechas figure{
     position: relative;
-    height: 250px;
     width: 350px;
+    height: 280px;
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0px 10px 25px rgba(0,0,0,0.50);
@@ -83,11 +114,13 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,103,123,0.6);
+    background: rgba(0,69,124,0.7);
     transition: all 500ms ease-out;
     opacity: 0;
     visibility: hidden;
     text-align: center;
+    overflow-y: auto; 
+    max-height: 280px;
 }
 
 .contenedorFechas figure:hover > .capa{
@@ -96,8 +129,9 @@ body {
 }
 
 .contenedorFechas figure:hover > .capa h3{/*titulo de cada imagen de agenda*/
-    margin-top: 70px;
-    margin-bottom: 15px;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .contenedorFechas figure:hover > img{
@@ -109,30 +143,31 @@ body {
     font-weight: 400;
     margin-bottom: 120px;
     transition: all 500ms ease-out;
-    margin-top: 20px;
+    margin-top: 1px;
 }
 
 .contenedorFechas figure .capa p{
     color: #fff;
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 13px;
+    line-height: 1.4;
     width: 100%;
-    max-width: 220px;
+    max-height: 280px;
     margin: auto;
 }
 
 
 
+
 /* Estilos para el footer */
 .footer {
-    background-color: rgba(34, 34, 73, 0.886);
-    color: hsl(0, 0%, 99%);
+    background-color: #00457c;
+    color: #F6F7F8;
     padding: 20px;
     text-align: center;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     z-index: 1000;
@@ -167,7 +202,7 @@ body {
 
 .social_media ul li a i {
     font-size: 24px;
-    color: white;
+    color: #F6F7F8;
 }
 
 .carousel-inner img {
@@ -179,17 +214,20 @@ body {
 @media screen and (min-width: 768px) {
     .BarraDeNavegacion {
         flex-direction: row;
-        height: 2.5rem;
-        margin-right: 5rem;
-        margin-left: 5rem;
+        
     }
 
+    
     .itemsNavegacion {
         margin: 0;
     }
 
     .img-navbar {
         width: 100%;
+    }
+
+    .contenedorTitulo{
+        margin:0;
     }
 
     .footer {
@@ -233,5 +271,8 @@ body {
 
     .itemsNavegacion {
         margin: 10px;
+    }
+    .contenedorTitulo {
+        margin: 10px
     }
 }
