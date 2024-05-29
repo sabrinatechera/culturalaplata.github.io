@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
@@ -11,9 +10,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/contacto.css" />
-    <title>Contacto</title>
+    <link
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    rel="stylesheet"
+  />    <title>Agenda Cultural</title>
+    <link rel="stylesheet" href="./css/agenda.css" />
   </head>
+
   <body>
     <header>
       <nav>
@@ -23,44 +26,79 @@
               src="./img/logo-cultura.png"
               height="85px"
               class="logo-navbar"
-              alt="Logo de cultura"/>
+              alt="Logo de cultura"
+            />
           </a>
-          
+
           <li class="itemsNavegacion"><a href="./index.html">Inicio</a></li>
-          <li class="itemsNavegacion"><a href="./laciudad.html">La Ciudad</a>
-          <li class="itemsNavegacion">Espacios culturales</li> <!-- falta agregar la 5ta página -->
-          <li class="itemsNavegacion"><a href="./agenda.html">Agenda</a>
-          <li class="itemsNavegacion"><a href="./contactoPrueba.html">Contacto</a>
+          <li class="itemsNavegacion">
+            <a href="./laciudad.html">La Ciudad</a>
+          </li>
+          <li class="itemsNavegacion">Espacios culturales</li>
+          <!-- falta agregar la 5ta página -->
+          <li class="itemsNavegacion"><a href="./agenda.html">Agenda</a></li>
+          <li class="itemsNavegacion">
+            <a href="./contactoPrueba.html">Contacto</a>
           </li>
         </ul>
       </nav>
     </header>
 
+    <section class="section-Region">
+      <h1 class="title-1">Contacto</h1>
+      <p class="presentation">Tenes alguna duda, ESCRIBINOS.</p>
+    </section>
+
     <div class="container">
-      <main>
-        <h1 class="tituloPrincipal">Envíanos tu consulta</h1>
-        <div class="right-column">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
-            ante non magna bibendum aliquet. Donec ut libero sed sapien varius
-            tincidunt. Phasellus at viverra est. In hac habitasse platea
-            dictumst.
-          </p>
-          <form action="#" method="post">
-            <input type="text" name="nombre" placeholder="Nombre" required />
-            <input type="text" name="ciudad" placeholder="Ciudad" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <textarea
-              name="consulta"
-              placeholder="Escriba su consulta aquí"
-              required
-            ></textarea>
-            <button type="submit">Enviar</button>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="formGroupName">Nombre y Apellido</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupName"
+                placeholder="Nombre y Apellido"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupEmail">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="formGroupEmail"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupPhone">Celular</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="formGroupPhone"
+                placeholder="Celular"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupConsulta">Consulta</label>
+              <textarea
+                class="form-control"
+                id="formGroupConsulta"
+                name="consulta"
+                placeholder="Escriba su consulta aquí"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Enviar</button>
           </form>
         </div>
-      </main>
+      </div>
     </div>
-
     <footer class="footer">
       <div class="social_media">
         <ul>
@@ -110,11 +148,5 @@
         </ul>
       </div>
     </footer>
-
-    <!-- jQuery, Popper.js, and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
   </body>
 </html>
