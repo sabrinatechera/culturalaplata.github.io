@@ -82,6 +82,8 @@ main {
     color: inherit !important;
 }
 
+
+
 /*Estilos para imágenes de agenda*/
 .contenedorFechas{
     width: 100%;
@@ -230,6 +232,8 @@ main {
         bottom: 0;
         width: 100%;
     }
+
+   
 }
 
 /* Desktop styles */
@@ -255,214 +259,43 @@ main {
     .cards-row .col-md-3:last-child {
         margin-right: 0; /* Elimina el margen a la derecha de la última tarjeta en dispositivos de escritorio */
     }
-}
 
-/* Estilos para dispositivos de escritorio con max-width */
-@media screen and (max-width: 1023px) {
-    .BarraDeNavegacion {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .itemsNavegacion {
-        margin: 10px;
-    }
-    .contenedorTitulo {
-        margin: 10px
-    }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-body {
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #F6F7F8;
-}
-
-/* Estilos para el header
-.logo-navbar {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    margin: auto;
-}
-
-.BarraDeNavegacion {
-    background-color: #00457c;
-    border-bottom: 7px solid #0079C1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0.5rem;
-}
-
-.itemsNavegacion {
-    list-style: none;
-    font-weight: bold;
-    color: #F6F7F8;
-    margin: 10px 0;
-}
-
-.itemsNavegacion a {
-    text-decoration: none;
-    color: inherit !important;
-}
-
-main {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    flex: 1;
-}
-
-.section-Region {
-    background-image: url("https://pixabay.com/get/ga86d5d0f2797806c8e2f456e4e5dd6e402175707423fe9fadfe25df71caaed2ae2b774a7fedfec8fbb90426c738e5810cfc2130582846d535449247b9d30a02de4805c7e9920b75d53fd5481d5d18668_640.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 1.5rem 1rem;
-    margin: 0 1rem 1rem 1rem;
-    border-radius: 8px;
-}
-
-.presentation {
-    color: rgb(34, 34, 34);
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-.title-1 {
-    font-weight: bold;
-    color: rgb(91, 107, 227);
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-/* Cuadrícula de imágenes en index 
-.container-imgCultura {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.img-Cultura {
-    height: 10rem;
-}
-
-/* Estilos para el footer 
-.footer {
-    background-color: #00457c;
-    color: #F6F7F8;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    z-index: 1000;
-}
-
-.social_media ul,
-.contact_info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.social_media ul li,
-.contact_info ul li {
-    display: inline-block;
-    margin-right: 15px;
-}
-
-.contact_info ul {
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.contact_info ul li {
-    text-align: right;
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-
-.social_media ul li {
-    list-style: none;
-}
-
-.social_media ul li a i {
-    font-size: 24px;
-    color: #F6F7F8;
-}
-
-.carousel-inner img {
-    height: 50vh;
-    object-fit: cover;
-}
-/* Tablet styles 
-@media screen and (min-width: 768px) {
-    .BarraDeNavegacion {
-        flex-direction: row;
-        height: auto;
-        margin: 0 5rem;
-    }
-
-    .itemsNavegacion {
-        margin: 0 1rem;
-    }
-
-    .logo-navbar {
+    .carousel-inner img {
         width: 100%;
-    }
+        max-width: 1000px; /* Ajusta el ancho máximo según tus necesidades */
+        max-height: 800px;
+        margin: 0 auto; /* Centra la imagen en su contenedor */
 
-    .footer {
-        position: relative;
-        bottom: 0;
-        width: 100%;
-    }
+      }
+
+
+      .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  background-image: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
-/* Desktop styles 
-@media screen and (min-width: 1024px) {
-    .BarraDeNavegacion {
-        display: flex;
-        width: auto;
-        justify-content: space-around;
-    }
-
-    .logo-navbar {
-        width: 500px;
-    }
-
-    .cards-row .col-md-3 {
-        margin-right: 3px;
-        margin-bottom: 10px;
-        display: grid;
-    }
-
-    .cards-row .col-md-3:last-child {
-        margin-right: 0;
-    }
+.carousel-control-prev-icon::after {
+  content: '<'; /* Utiliza el símbolo menor que (<) para la flecha izquierda */
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/* Estilos para dispositivos de escritorio con max-width 
-@media screen and (max-width: 1023px) {
-    .BarraDeNavegacion {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .itemsNavegacion {
-        margin: 10px;
-    }
+.carousel-control-next-icon::after {
+  content: '>'; /* Utiliza el símbolo mayor que (>) para la flecha derecha */
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-*/
+   
+}
