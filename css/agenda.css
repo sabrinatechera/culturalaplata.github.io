@@ -119,6 +119,8 @@ main {
     opacity: 0;
     visibility: hidden;
     text-align: center;
+    overflow-y: auto; 
+    max-height: 280px;
 }
 
 .contenedorFechas figure:hover > .capa{
@@ -155,6 +157,7 @@ main {
 
 
 
+
 /* Estilos para el footer */
 .footer {
     background-color: #00457c;
@@ -164,7 +167,7 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     z-index: 1000;
