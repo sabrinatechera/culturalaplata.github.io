@@ -123,21 +123,29 @@ body {
 
 /* Cards con imágenes y textos */
 
-.containercardsespacioscult{
-    margin: 2rem;
-
+.containercardsespacioscult {
+    margin: 2rem 0;
 }
 
-.cardespacioscult{
-    margin: 0,5rem;
+.cardespacioscult {
+    margin: 1rem auto;
     width: 90%;
     text-align: center;
-    margin: 2rem;
-    border-color: none;
-
+    border: none;
+    display: flex;
+    justify-content: center;
 }
 
-.cardespaciosculttext{
+.card {
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.cardespaciosculttext {
     color: white;
     font-weight: bold;
     position: absolute;
@@ -203,6 +211,7 @@ body {
         flex-direction: row;
         
     }
+
     
     .itemsNavegacion {
         margin: 0;
@@ -235,5 +244,15 @@ body {
     .img-navbar {
         width: 500px;
     }
-  
+
+    .cards-row .col-md-3 {
+        margin-right: 3px;
+        margin-bottom: 10px; 
+        display: grid; 
+    }
+
+    .cards-row .col-md-3:last-child {
+        margin-right: 0; 
+    }
 }
+
