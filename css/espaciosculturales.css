@@ -117,20 +117,31 @@ body {
 
 /* Mapa */
 .googlemaps{
-    background-color: rgba(255, 255, 255, 0.886);
     padding: 2rem;
 }
 
 /* Cards con imágenes y textos */
-.containercardsespaciosculturales{
-    border: 1px solid red;
+
+.containercardsespacioscult{
+    margin: 2rem;
+
 }
-.cardespaciosculturales{
-    border: 1px solid rgb(56, 15, 167);
+
+.cardespacioscult{
+    margin: 0,5rem;
+    width: 90%;
+    text-align: center;
+    margin: 2rem;
+    border-color: none;
+
 }
-.textcardsespaciosculturales{
-    margin-top: 0px;
-    border: 1px solid rgb(214, 144, 13);
+
+.cardespaciosculttext{
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 1rem;
+    align-self: center;
 }
 
 /* Estilos para el footer */
