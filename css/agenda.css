@@ -91,12 +91,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 120vh;
 }
 
 .contenedorFechas figure{
     position: relative;
-    width: 350px;
     height: 280px;
     overflow: hidden;
     border-radius: 6px;
