@@ -11,8 +11,41 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color:#F6F7F8;
+ 
+}
+
+/* Estilo para main*/
+
+main {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.section-Region{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     
 }
+
+.title-1 {
+    background-color:#0079C1 ;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-shadow: 0px 5px 10px rgba(0,0,0,0.7);
+    
+}
+
+.presentation {
+    color: #0079C1;
+    text-align: center;
+}
+
 
 .img-navbar {
     width: 100%;
@@ -46,12 +79,6 @@ body {
     color: inherit !important;
 }
 
-main {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    flex: 1;
-}
-
 .section-Region {
     background-image: url("https://pixabay.com/get/ga86d5d0f2797806c8e2f456e4e5dd6e402175707423fe9fadfe25df71caaed2ae2b774a7fedfec8fbb90426c738e5810cfc2130582846d535449247b9d30a02de4805c7e9920b75d53fd5481d5d18668_640.jpg");
     background-repeat: no-repeat;
@@ -61,18 +88,37 @@ main {
     margin: 0 1rem 1rem 1rem;
 }
 
-.presentation {
-    color: rgb(34, 34, 34);
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+/* Estilos para el header*/
+.img-navbar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.title-1 {
+.BarraDeNavegacion {
+    background-color: #00457c;
+    border-bottom: 7px solid #0079C1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto;
+    align-items: center;
+  
+}
+
+.itemsNavegacion {
+    list-style: none;
     font-weight: bold;
-    color: rgb(91, 107, 227);
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+    color: #F6F7F8;
+    margin: 10px 0;
+}
+
+.itemsNavegacion a {
+    text-decoration: none;
+    color: inherit !important;
 }
 
 /* Mapa */
@@ -95,14 +141,14 @@ main {
 
 /* Estilos para el footer */
 .footer {
-    background-color: rgba(34, 34, 73, 0.886);
-    color: hsl(0, 0%, 99%);
+    background-color: #00457c;
+    color: #F6F7F8;
     padding: 20px;
     text-align: center;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     z-index: 1000;
@@ -142,29 +188,26 @@ main {
 
 .social_media ul li a i {
     font-size: 24px;
-    color: white;
-}
-
-.carousel-inner img {
-    height: 50vh;
-    object-fit: cover;
+    color: #F6F7F8;
 }
 
 /* Tablet styles */
 @media screen and (min-width: 768px) {
     .BarraDeNavegacion {
         flex-direction: row;
-        height: 2.5rem;
-        margin-right: 5rem;
-        margin-left: 5rem;
+        
     }
-
+    
     .itemsNavegacion {
         margin: 0;
     }
 
     .img-navbar {
         width: 100%;
+    }
+
+    .contenedorTitulo{
+        margin:0;
     }
 
     .footer {
@@ -186,27 +229,5 @@ main {
     .img-navbar {
         width: 500px;
     }
-
-    /* Ajustes para las tarjetas en dispositivos de escritorio */
-    .cards-row .col-md-3 {
-        margin-right: 3px;
-        margin-bottom: 10px; /* Agrega un margen inferior de 10px a las tarjetas */
-        display: grid; /* Revierte a la visualización de bloque */
-    }
-
-    .cards-row .col-md-3:last-child {
-        margin-right: 0; /* Elimina el margen a la derecha de la última tarjeta en dispositivos de escritorio */
-    }
-}
-
-/* Estilos para dispositivos de escritorio con max-width */
-@media screen and (max-width: 1023px) {
-    .BarraDeNavegacion {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .itemsNavegacion {
-        margin: 10px;
-    }
+  
 }
