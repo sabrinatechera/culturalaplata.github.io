@@ -15,14 +15,6 @@ body {
  
 }
 
-/* Estilo para main*/
-
-main {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    flex: 1;
-}
-
 .section-Region{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -47,6 +39,7 @@ main {
 }
 
 
+/* Estilos para el header*/
 .img-navbar {
     width: 100%;
     height: auto;
@@ -57,20 +50,20 @@ main {
 }
 
 .BarraDeNavegacion {
-    background-color: rgba(36, 36, 130, 0.886);
+    background-color: #00457c;
+    border-bottom: 7px solid #0079C1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: auto;
     align-items: center;
-    margin: 10px;
+  
 }
 
 .itemsNavegacion {
     list-style: none;
     font-weight: bold;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #F6F7F8;
     margin: 10px 0;
 }
 
@@ -78,6 +71,7 @@ main {
     text-decoration: none;
     color: inherit !important;
 }
+/* termina  el header*/
 
 .section-Region {
     background-image: url("https://pixabay.com/get/ga86d5d0f2797806c8e2f456e4e5dd6e402175707423fe9fadfe25df71caaed2ae2b774a7fedfec8fbb90426c738e5810cfc2130582846d535449247b9d30a02de4805c7e9920b75d53fd5481d5d18668_640.jpg");
