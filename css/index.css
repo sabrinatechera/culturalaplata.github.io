@@ -13,36 +13,30 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color:#F6F7F8;
- 
+    background-color: #F6F7F8;
+
 }
 
 /* Estilo para main*/
 
-main {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    flex: 1;
-}
-
-.section-Region{
+.section-Region {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    
+
 }
 
 .title-1 {
-    background-color:#0079C1 ;
+    background-color: #0079C1;
     font-weight: bold;
     color: white;
     font-size: 30px;
     text-align: center;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    text-shadow: 0px 5px 10px rgba(0,0,0,0.7);
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
     margin-bottom: 15px;
 
-    
+
 }
 
 .presentation {
@@ -69,7 +63,7 @@ main {
     justify-content: space-around;
     height: auto;
     align-items: center;
-  
+
 }
 
 .itemsNavegacion {
@@ -83,78 +77,6 @@ main {
     text-decoration: none;
     color: inherit !important;
 }
-
-
-
-/*Estilos para imágenes de agenda*/
-.contenedorFechas{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.contenedorFechas figure{
-    position: relative;
-    height: 250px;
-    width: 350px;
-    overflow: hidden;
-    border-radius: 6px;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.50);
-    cursor: pointer;
-}
-
-.contenedorFechas figure img{
-    width: 100%;
-    height: 100%;
-    transition: all 500ms ease-out;
-}
-
-.contenedorFechas figure .capa{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,103,123,0.6);
-    transition: all 500ms ease-out;
-    opacity: 0;
-    visibility: hidden;
-    text-align: center;
-}
-
-.contenedorFechas figure:hover > .capa{
-    opacity: 1;
-    visibility: visible;
-}
-
-.contenedorFechas figure:hover > .capa h3{/*titulo de cada imagen de agenda*/
-    margin-top: 70px;
-    margin-bottom: 15px;
-}
-
-.contenedorFechas figure:hover > img{
-    transform: scale(1.3);
-}
-
-.contenedorFechas figure .capa h3{/*titulo de cada imagen de agenda*/
-    color: #fff;
-    font-weight: 400;
-    margin-bottom: 120px;
-    transition: all 500ms ease-out;
-    margin-top: 20px;
-}
-
-.contenedorFechas figure .capa p{
-    color: #fff;
-    font-size: 15px;
-    line-height: 1.5;
-    width: 100%;
-    max-width: 220px;
-    margin: auto;
-}
-
 
 
 /* Estilos para el footer */
@@ -173,8 +95,8 @@ main {
 }
 
 .footer a {
-    color: #F6F7F8; 
-    text-decoration: none; 
+    color: #F6F7F8;
+    text-decoration: none;
 }
 
 .social_media ul,
@@ -218,10 +140,10 @@ main {
 @media screen and (min-width: 768px) {
     .BarraDeNavegacion {
         flex-direction: row;
-        
+
     }
 
-    
+
     .itemsNavegacion {
         margin: 0;
     }
@@ -230,8 +152,8 @@ main {
         width: 100%;
     }
 
-    .contenedorTitulo{
-        margin:0;
+    .contenedorTitulo {
+        margin: 0;
     }
 
     .footer {
@@ -240,69 +162,68 @@ main {
         width: 100%;
     }
 
-   
+
 }
 
-/* Desktop styles */
+/* Estilos para escritorio  */
 @media screen and (min-width: 1024px) {
     .BarraDeNavegacion {
-       display: flex;
-       width: auto;
-       height: auto;
-       justify-content: space-around;
+        display: flex;
+        width: auto;
+        height: auto;
+        justify-content: space-around;
     }
 
     .img-navbar {
         width: 500px;
     }
 
-    /* Ajustes para las tarjetas en dispositivos de escritorio */
+    /* Ajustes para las tarjetas del carrusel  */
     .cards-row .col-md-3 {
         margin-right: 3px;
-        margin-bottom: 10px; /* Agrega un margen inferior de 10px a las tarjetas */
-        display: grid; /* Revierte a la visualización de bloque */
+        margin-bottom: 10px;
+        display: grid;
     }
 
     .cards-row .col-md-3:last-child {
-        margin-right: 0; /* Elimina el margen a la derecha de la última tarjeta en dispositivos de escritorio */
+        margin-right: 0;
     }
 
     .carousel-inner img {
         width: 100%;
-        max-width: 1000px; /* Ajusta el ancho máximo según tus necesidades */
+        max-width: 1000px;
         max-height: 800px;
-        margin: 0 auto; /* Centra la imagen en su contenedor */
+        margin: 0 auto;
 
-      }
+    }
 
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: black;
+        background-image: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
 
-      .carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: black;
-  background-image: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
+    .carousel-control-prev-icon::after {
+        content: '<';
+        font-size: 30px;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
-.carousel-control-prev-icon::after {
-  content: '<'; /* Utiliza el símbolo menor que (<) para la flecha izquierda */
-  font-size: 30px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+    .carousel-control-next-icon::after {
+        content: '>';
+        font-size: 30px;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
-.carousel-control-next-icon::after {
-  content: '>'; /* Utiliza el símbolo mayor que (>) para la flecha derecha */
-  font-size: 30px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-   
 }

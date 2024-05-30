@@ -18,6 +18,7 @@ body {
 
 /* Estilo para main*/
 
+
 .section-Region{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -249,29 +250,14 @@ body {
         width: 500px;
     }
 
-    /* Ajustes para las tarjetas en dispositivos de escritorio */
     .cards-row .col-md-3 {
         margin-right: 3px;
-        margin-bottom: 10px; /* Agrega un margen inferior de 10px a las tarjetas */
-        display: grid; /* Revierte a la visualización de bloque */
+        margin-bottom: 10px; 
+        display: grid; 
     }
 
     .cards-row .col-md-3:last-child {
-        margin-right: 0; /* Elimina el margen a la derecha de la última tarjeta en dispositivos de escritorio */
+        margin-right: 0; 
     }
 }
 
-/* Estilos para dispositivos de escritorio con max-width */
-@media screen and (max-width: 1023px) {
-    .BarraDeNavegacion {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .itemsNavegacion {
-        margin: 10px;
-    }
-    .contenedorTitulo {
-        margin: 10px
-    }
-}
