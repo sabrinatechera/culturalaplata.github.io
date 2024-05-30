@@ -23,6 +23,7 @@ body {
     margin-left: auto;
 }
 
+
 .BarraDeNavegacion {
     background-color: rgba(36, 36, 130, 0.886);
     display: flex;
@@ -68,11 +69,15 @@ main {
 }
 
 .title-1 {
+    background-color:#0079C1 ;
     font-weight: bold;
-    color: rgb(91, 107, 227);
+    color: white;
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-shadow: 0px 5px 10px rgba(0,0,0,0.7);
+    margin-bottom: 15px;
 }
 
 /* Mapa */
