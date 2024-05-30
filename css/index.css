@@ -170,6 +170,11 @@ main {
     z-index: 1000;
 }
 
+.footer a {
+    color: #F6F7F8; 
+    text-decoration: none; 
+}
+
 .social_media ul,
 .contact_info ul {
     list-style: none;
