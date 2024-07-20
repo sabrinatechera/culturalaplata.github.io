@@ -1,0 +1,10 @@
+correcciones globales:
+los modulos .css tienen todos estilos generales que se podrian llevar a un solo css
+(modularizacion)
+
+index.html
+-(MEJORA)el prompt tiene algunas validaciones pero deberian "sanitizar datos"
+-(responsive) tiene fallas entre 500px hasta 800px aprox
+
+agenda.html
+- (visual) las imagenes quedaron una debajo de la otra el flex no esta bien trabajado

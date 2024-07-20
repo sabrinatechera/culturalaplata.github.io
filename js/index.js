@@ -1,5 +1,5 @@
 let dbUsuarios = [
-    { 
+    {
         "nombre": "Administrador",
         "email": "admin@gmail.com",
         "password": "admin",
