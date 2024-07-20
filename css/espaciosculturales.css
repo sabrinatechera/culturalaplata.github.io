@@ -39,7 +39,6 @@ body {
     text-align: center;
 }
 
-
 /* Estilos para el header*/
 .img-navbar {
     width: 100%;
@@ -72,6 +71,7 @@ body {
     text-decoration: none;
     color: inherit !important;
 }
+
 /* termina  el header*/
 
 .section-Region {
@@ -83,38 +83,6 @@ body {
     margin: 0 1rem 1rem 1rem;
 }
 
-/* Estilos para el header*/
-.img-navbar {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.BarraDeNavegacion {
-    background-color: #00457c;
-    border-bottom: 7px solid #0079C1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: auto;
-    align-items: center;
-  
-}
-
-.itemsNavegacion {
-    list-style: none;
-    font-weight: bold;
-    color: #F6F7F8;
-    margin: 10px 0;
-}
-
-.itemsNavegacion a {
-    text-decoration: none;
-    color: inherit !important;
-}
 
 /* Mapa */
 .googlemaps{
@@ -236,4 +204,19 @@ body {
         width: 500px;
     }
   
+}
+
+/* Estilos para dispositivos de escritorio con max-width */
+@media screen and (max-width: 1023px) {
+    .BarraDeNavegacion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .itemsNavegacion {
+        margin: 10px;
+    }
+    .contenedorTitulo {
+        margin: 10px
+    }
 }
