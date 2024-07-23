@@ -16,7 +16,7 @@
   />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
   <link rel="stylesheet" href="./css/generales.css" /> <!--importo el modulo generales -->
-  <link rel="stylesheet" href="./css/contacto.css" />
+  <link rel="stylesheet" href="./css/login.css" />
   <title>Inicio de sesión</title>
   </head>
 
@@ -42,15 +42,38 @@
         </ul>
       </nav>
     </header>
-    <!-- no olviden la estructura básica de una página les falta el main -->
-    <main>
+      <main>
       <section class="section-Region">
         <h1 class="title-1">Inicio de Sesión</h1>
-        <p></p>
+
+        <p>BIENVENIDO PEDRO</p> <!-- Acá que cambie el pedro con el usuario registrado -->
+
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-6">
-              <form>
+
+             <form action="">
+              <div class="form-group">
+                <label for="usuario">Ingrese su nombre de usuario:</label>
+                <input type="text" name="user" class="form-control" placeholder="Usuario" id="usuario">
+              </div>  
+
+              <div class="form-group">
+                <label for="email">Ingrese su email:</label>
+                <input type="email" name="email" class="form-control" placeholder="Email" id="email">
+              </div>
+
+              <div class="form-group">
+                <label for="contrasena">Ingrese su contraseña:</label>
+                <input type="password" name="contrasena" class="form-control" placeholder="Contraseña" id="contrasena">
+              </div>
+
+                <button type="submit" onclick="capturarDatos()">Enviar</button>
+                <button type="reset">Cancelar</button>
+
+              </form>
+
+              <!-- <form action="" id="registro"> 
                 <div class="form-group">
                   <label for="formGroupName">Nombre de Usuario</label>
                   <input
@@ -58,8 +81,7 @@
                     class="form-control"
                     id="formGroupName"
                     placeholder="Nombre de Usuario"
-                    required
-                  />
+                    required/>
                 </div>
                 <div class="form-group">
                   <label for="formGroupEmail">Email</label>
@@ -68,8 +90,7 @@
                     class="form-control"
                     id="formGroupEmail"
                     placeholder="Email"
-                    required
-                  />
+                    required/>
                 </div>
                 <div class="form-group">
                   <label for="formGroupPhone">Contraseña</label>
@@ -78,12 +99,13 @@
                     class="form-control"
                     id="formGroupPhone"
                     placeholder="Contraseña"
-                    required
-                  />
+                    required/>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
-                <button type="reset" class="btn btn-primary btn-block">Limpiar</button>
-              </form>
+
+                <button type="submit" onclick=capturarDatos() class="btn btn-primary btn-block">Ingresar</button>
+                <button type="reset" class="btn btn-primary btn-block">Cancelar</button>
+              </form>-->
+              
             </div>
           </div>
         </div>
