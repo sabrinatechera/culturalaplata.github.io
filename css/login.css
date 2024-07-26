@@ -1,8 +1,13 @@
 
-/* Estilos para página Login */
-.errores{
-    color: red;
+.respuesta{
+    display: flex;
+    justify-content: center;
+    margin: 0.3rem 0;
+    list-style-type: none;
+    
 }
+
+
 
 
 /* Desktop styles */
