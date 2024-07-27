@@ -39,7 +39,11 @@ window.addEventListener('load', function(){
             divContenido.appendChild(ulErrores);
         } else {
             if(usuarioEncontrado === true){
-                alert('El email que ingresado ya se encuentra registrado.')
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'El email que ingresado ya se encuentra registrado.',
+                });
                 let mensajeDeRespuesta = document.createElement('p');
                 mensajeDeRespuesta.innerHTML = `El email: ${inputEmail.value} ya se encuentra registrado.`;
                 divContenido.appendChild(mensajeDeRespuesta);
@@ -57,12 +61,17 @@ window.addEventListener('load', function(){
                 localStorage.setItem('usuarios', JSON.stringify(dbUsuarios));
                 sessionStorage.setItem('usuario', inputName.value);
 
-                alert(`Gracias, ${inputName.value} por registrarte en nuestra página. Ya sos parte de la comunidad platense!!!`);
-                let enlace = document.createElement('div');
-                enlace.innerHTML = `<a class='btn' href='../index.html'>Te invitamos ir a la sección Inicio para descubrir en profundidad esta bella ciudad!!!</a>`;
-                divContenido.appendChild(enlace);
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Registro Exitoso',
+                    text: `Gracias, ${inputName.value} por registrarte en nuestra página. Ya sos parte de la comunidad platense!!!`,
+                }).then(() => {
+                    let enlace = document.createElement('div');
+                    enlace.innerHTML = `<a class='btn' href='../index.html'>Te invitamos ir a la sección Inicio para descubrir en profundidad esta bella ciudad!!!</a>`;
+                    divContenido.appendChild(enlace);
+                });
             }
         }
 
     })
-})
+});
