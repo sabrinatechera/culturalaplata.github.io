@@ -35,3 +35,27 @@ const onload = () => {
 };
 
 window.onload = onload;
+
+
+
+
+//  alert de form 
+
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('form');
+  
+  form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+
+    // Mostrar la alerta de éxito
+    Swal.fire({
+      title: '¡Éxito!',
+      text: 'Su consulta se ha enviado con éxito.',
+      icon: 'success',
+      confirmButtonText: 'Aceptar'
+    });
+
+    // Opcional: Resetear el formulario después de mostrar la alerta
+    form.reset();
+  });
+});
