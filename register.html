@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="./css/generales.css" /> <!--importo el modulo generales -->
   <link rel="stylesheet" href="./css/login.css" />
   <link rel="shortcut icon" href="./img/logo-cultura.png" type="image/x-icon">
-  <title>Inicio de sesión</title>
+  <title>Registro</title>
   </head>
 
   <body>
@@ -44,16 +44,21 @@
       </nav>
     </header>
       <main>
-      <section class="section-Region">
-        <h1 class="title-1">Inicio de sesión</h1>
+        <section class="section-Region">
+          <h1 class="title-1">Crear usuario y contraseña</h1>
+  
+          <p class="presentation">Por favor, complete el formulario que se encuentra a continuación para poder registrarse en nuestra página.</p>
+  
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+  
+                <form class="formRegister" id="form-register"> 
+                  <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Nombre" required/>
+                  </div>
 
-        <p class="presentation">Por favor, ingrese su email y contraseña para iniciar sesión.</p>
-
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-6">
-
-              <form class="formLogin" id="form-login"> 
                   <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" placeholder="Email" required/>
@@ -65,19 +70,19 @@
                   </div>
 
                   <div>
-                    <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
-                    <button type="reset" class="btn btn-primary btn-block">Cancelar</button>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                    <button type="reset" class="btn btn-primary btn-block">Borrar</button>
 
-                    <div class='respuesta' id="divContenidoLogin"></div>
-                    <a href="./register.html" class="btn btn-block" >Registrarse</a>
+                    <div class='respuesta' id="divContenidoRegister"></div>
                 
                   </div>                  
               </form>
-            
+             
+  
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
     </main>
 
     <footer class="footer">
@@ -127,6 +132,6 @@
         </ul>
       </div>
     </footer>
-    <script src="./js/login.js"></script>
+    <script src="./js/register.js"></script>
   </body>
 </html>
